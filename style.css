@@ -1,0 +1,145 @@
+html, body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-content {
+  height: 1000px;
+  background-color: burlywood;
+}
+
+.logo-img {
+  max-height: 40px;
+}
+
+.menu-item {
+  font-weight: 600;
+}
+
+.menu-item a {
+  transition: all ease 0.3s;
+}
+
+.menu-item a:hover {
+  color: #226FB7 !important;
+}
+
+.active {
+  color: #226FB7 !important;
+}
+
+.navbar-hamburger {
+  width: 30px;
+  height: 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar-hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: #212529;
+  transition: all ease 0.3s;
+}
+
+.navbar-hamburger:hover span {
+  background-color: #226FB7;
+}
+
+.nav-dropdown::before {
+  content: "+";
+  position: absolute;
+  top: auto;
+  right: -10px;
+  display: block;
+}
+
+.nav-dropdown:hover::before {
+  content: "-";
+}
+
+.sub-menu {
+  display: inline-block;
+  position: absolute;
+  width: 300px;
+  left: auto;
+  top: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform-origin: left top;
+  transform: scaleY(0);
+}
+
+.menu-item-sub:hover .sub-menu {
+  transform: scaleY(1);
+}
+
+.sub-menu li {
+  padding: 12px 8px;
+}
+
+.sub-menu li a {
+  font-weight: 400;
+}
+
+.offcanvas {
+  transition: all 0.3s ease;
+}
+
+.btn-close-sidebar {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: none;
+  background: none;
+  background-color: #226FB7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-close-sidebar span {
+  position: absolute;
+	transition: transform 0.2s ease;
+  padding: 5px;
+	font-size: 30px;
+  font-weight: 400;
+	line-height: 1;
+  color: #fff;
+	cursor: pointer;
+}
+
+.btn-close-sidebar span:before{
+	content: "\d7";
+}
+.btn-close-sidebar span:hover{
+	transform: rotate(90deg);
+}

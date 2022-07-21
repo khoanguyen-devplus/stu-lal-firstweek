@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900');
 
 :root {
-  --main-color: #226FB7;
+  --main-color: #226fb7;
 }
 
 html, body {
@@ -27,10 +27,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.main-content {
-  height: 1000px;
 }
 
 .header {
@@ -218,7 +214,6 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 26px;
-  transition: all 0.3s ease;
 }
 
 .banner-button:hover {
@@ -324,80 +319,6 @@ img {
   padding-left: 95px;
 }
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-     opacity: 0;
-     transform: translateX(-50%);
-  }
-  100% {
-     opacity: 1;
-     transform: translateX(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-     opacity: 0;
-     transform: translateY(100%);
-  }
-  100% {
-     opacity: 1;
-     transform: translateY(0);
-  }
-}
-
-@media only screen and (max-width: 1199px) {
-  .banner-title {
-    font-size: 45px;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .banner-title {
-    font-size: 40px;
-  }
-
-  .about .d-lg-flex {
-    flex-direction: column-reverse;
-  }
-
-  .notice-board {
-    width: 100%;
-  }
-  
-  .about-part {
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  .container-board, .section-about {
-    margin-top: 70px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .banner-title {
-    font-size: 35px;
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .banner-title {
-    font-size: 30px;
-  }
-}
-
 .sidebar-logo {
   margin: 30px 0;
 }
@@ -446,4 +367,189 @@ img {
 
 .sidebar-contact a:hover {
   color: #097EEB;
+}
+
+.concern {
+  padding: 100px 0;
+}
+
+.row>* {
+  padding: 0;
+}
+
+.concern-question {
+  padding: 50px;
+  background-color: #F9F8F8;
+}
+
+.question-title {
+  margin-bottom: 40px;
+}
+
+.question-item {
+  margin-bottom: 25px;
+  border: none;
+}
+
+.question-button {
+  padding: 20px 60px;
+  position: relative;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.question-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.question-button:not(.collapsed) {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.question-button::after {
+  font-family:'Bootstrap-icons';
+  content:'\F18A';
+  background-image: none;
+  position: absolute;
+  left: 20px;
+  font-weight: 500;
+}
+
+.question-button:not(.collapsed)::after {
+  content: '\F631';
+  color: #fff;
+  background-image: none;
+  transform: rotate(0);
+}
+
+.video-popup {
+  position: relative;
+}
+
+.video-popup::after {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
+.concern-video:hover .video-popup::after {
+	animation: pulse 3s ease-out infinite;
+}
+
+.video-popup::before {
+  content: '\F4F4';
+  font-family: 'Bootstrap-icons';
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 2px;
+  font-size: 50px;
+  z-index: 100;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1199px) {
+  .banner-title {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .banner-title {
+    font-size: 40px;
+  }
+
+  .notice-board, .about-part {
+    width: 100%;
+    padding: 0;
+  }
+
+  .section-about {
+    margin-top: 0;
+  }
+
+  .video-popup {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .video-popup img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner-title {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .banner-title {
+    font-size: 30px;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-50%);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+     opacity: 0;
+     transform: translateY(100%);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgb(34, 111, 183, 0.7);
+	}
+
+	40% {
+		box-shadow: 0 0 0 40px rgb(34, 111, 183, 0.4);
+	}
+
+  60% {
+		box-shadow: 0 0 0 40px rgb(34, 111, 183, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgb(34, 111, 183, 0);
+	}
 }

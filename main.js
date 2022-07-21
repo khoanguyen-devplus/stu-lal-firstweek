@@ -23,3 +23,7 @@ const lightbox2 = GLightbox({
     },
   },
 });
+
+// Preloading
+let loader = document.getElementById("loader");
+setTimeout(function(){ loader.style.display = "none"; }, 1300);

@@ -31,12 +31,21 @@ setTimeout(function () {
 }, 1300);
 
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  freeMode: true,
+  slidesPerView: 1,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    // when window width is >= 991px
+    991: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
   },
 });

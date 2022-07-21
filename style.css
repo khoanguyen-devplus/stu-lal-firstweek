@@ -507,6 +507,119 @@ a:hover .icon-part img {
   color: #097eeb;
 }
 
+.container .container-fluid{
+  display: block;
+  
+}
+
+.campus-main-title{
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.row{
+  background-color: #fff;  
+  width: 100%;
+  height: auto;
+}
+
+.col-md-4{
+  margin: 20px;
+  width: 392px;
+  height: 385px;
+  border: 1px solid #cccc;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  border: 1px solid #dfe9eb;
+  transition: all 0.3s ease;
+}
+
+
+.campus-img1{
+  margin: 30px;
+  border-radius:5px;
+  width: 328px;
+  height: 220px;
+ 
+  
+}
+
+.campus-title{
+  font-size: 20px;
+  margin: 30px 10px 30px 10px;
+  text-align: center;
+
+}
+
+h3{
+  color: #111111;
+  margin: 0 0 26px;
+  line-height: 1.2;
+}
+
+.container-fluid.admission{
+  margin-top: 100px;
+  padding: 0;
+  width: 100%;
+  height: auto ;
+  background-color: #f3f8f9;
+  display: flex;
+  
+}
+
+.col-md-6{
+  height: auto;
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.img-left{
+  width: 100%;
+  height:auto;
+}
+
+.col-md-6{
+  padding: 20px;
+}
+
+.admission-title{
+  font-weight: 500;
+  margin-top: 20px;
+  margin-left: 30px ;
+}
+
+.admission-content{
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 100px;
+  transition: all 0.3s ease;
+
+}
+.admission-des{
+  margin: 0px;
+  font-size: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 200;
+  
+}
+
+.but-apply{
+  margin-top: 20px;
+  font-weight:600;
+  padding: 16px 60px;
+  background-color: #226FB7;
+  color: #ffff;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.but-apply:hover{
+ background-color: #067b86;
+}
+
 .concern {
   padding: 100px 0;
 }

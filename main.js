@@ -57,3 +57,20 @@ VanillaTilt.init(tilt, {
   scale: 1.14,
   perspective: 10000
 });
+
+// Scroll up
+var scrollUpBtn = document.getElementById("scroll-up");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
+  }
+}
+
+function scrollUpFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}

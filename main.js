@@ -26,4 +26,17 @@ const lightbox2 = GLightbox({
 
 // Preloading
 let loader = document.getElementById("loader");
-setTimeout(function(){ loader.style.display = "none"; }, 1300);
+setTimeout(function () {
+  loader.style.display = "none";
+}, 1300);
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

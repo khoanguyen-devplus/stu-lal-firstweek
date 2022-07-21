@@ -49,3 +49,11 @@ const swiper = new Swiper(".mySwiper", {
     },
   },
 });
+setTimeout(function(){ loader.style.display = "none"; }, 1300);
+
+// Tilt poster
+var tilt = document.getElementById("js-tilt");
+VanillaTilt.init(tilt, {
+  scale: 1.14,
+  perspective: 10000
+});

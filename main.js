@@ -49,22 +49,26 @@ const swiper = new Swiper(".mySwiper", {
     },
   },
 });
-setTimeout(function(){ loader.style.display = "none"; }, 1300);
 
 // Tilt poster
 var tilt = document.getElementById("js-tilt");
 VanillaTilt.init(tilt, {
   scale: 1.14,
-  perspective: 10000
+  perspective: 10000,
 });
 
 // Scroll up
 var scrollUpBtn = document.getElementById("scroll-up");
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     scrollUpBtn.style.display = "block";
   } else {
     scrollUpBtn.style.display = "none";
@@ -72,5 +76,5 @@ function scrollFunction() {
 }
 
 function scrollUpFunction() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
